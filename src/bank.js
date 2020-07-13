@@ -15,3 +15,8 @@ function Account() {
    this.balance += amount
    this.transactions.push(`${date} || ${amount} || || ${this.balance}`)
  };
+
+ Account.prototype.withdraw = function (date, amount) {
+   this.balance -= amount
+   this.transactions.push(`${date} || || ${amount} || ${this.balance}`)
+ };
