@@ -11,16 +11,16 @@ function Account() {
    return output
  };
 
- Account.prototype.deposit = function (date, amount) {
+ Account.prototype.deposit = function (amount, date) {
    this.balance += amount
-   this.transactions.push(`${date} || ${this.round(amount)} || || ${this.round(this.balance)}`)
+   this.transactions.push(`${date} || ${this.display2DP(amount)} || || ${this.display2DP(this.balance)}`)
  };
 
- Account.prototype.withdraw = function (date, amount) {
+ Account.prototype.withdraw = function (amount, date) {
    this.balance -= amount
-   this.transactions.push(`${date} || || ${this.round(amount)} || ${this.round(this.balance)}`)
+   this.transactions.push(`${date} || || ${this.display2DP(amount)} || ${this.display2DP(this.balance)}`)
  };
 
- Account.prototype.round = function(number) {
+ Account.prototype.display2DP = function(number) {
    return Number(number).toFixed(2)
  }
