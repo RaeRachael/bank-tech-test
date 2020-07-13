@@ -12,6 +12,7 @@ Account.prototype.printStatement = function () {
 };
 
 Account.prototype.deposit = function (amount, date) {
+  date = date || this._today()
   this.balance += amount
   this.transactions.push(`${date} || ${this._display2DP(amount)} || || ${this._display2DP(this.balance)}`)
 };
