@@ -1,3 +1,14 @@
+## How to run
+
+```
+open SpecRunner
+```
+* To create an account; ``` <name> = new Account ```
+* To print statement; ``` <name>.printStatemnt()```
+* To depostit; ```<name>.deposit(<amount>)```
+* To withdraw; ```<name>.withdraw(<amount>)```
+
+
 ## Specification
 
 ### Requirements
@@ -31,3 +42,7 @@ transaction hash -- keys
   credit
   debit
   balance
+
+### changes
+
+transaction just became an array of strings.
