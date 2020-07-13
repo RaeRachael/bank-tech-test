@@ -5,11 +5,11 @@ function Account() {
  Account.prototype.printStatement = function () {
    output = "date || credit || debit || balance"
    this.transactions.forEach( function(transaction) {
-     output += transaction
+     output += "\n" + transaction
    });
    return output
  };
 
- Account.prototype.deposit = function (date, ammount) {
-   this.transactions.push("13/07/2020 || 1005 || || 1005")
+ Account.prototype.deposit = function (date, amount) {
+   this.transactions.push(`${date} || ${amount} || || ${amount}`)
  };
