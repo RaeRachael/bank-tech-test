@@ -32,7 +32,7 @@ describe('Bank', function(){
       expect(account.printStatement()).toEqual(output);
     });
     it('diposit, unspecified date', function(){
-      account.deposit(853.25,)
+      account.deposit(853.25)
       var today = new Date();
       var dd = String(today.getDate()).padStart(2, '0');
       var mm = String(today.getMonth() + 1).padStart(2, '0');
@@ -51,7 +51,7 @@ describe('Bank', function(){
       expect(account.printStatement()).toEqual(output);
     });
     it('withdraw, unspecified date', function(){
-      account.withdraw(97.5,)
+      account.withdraw(97.5)
       var today = new Date();
       var dd = String(today.getDate()).padStart(2, '0');
       var mm = String(today.getMonth() + 1).padStart(2, '0');
