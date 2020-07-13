@@ -39,5 +39,16 @@ describe('Bank', function(){
       output = "date || credit || debit || balance\n15/07/2020 || || 105.00 || -105.00"
       expect(account.printStatement()).toEqual(output);
     });
+    it('withdraw, unspecified date', function(){
+      account.withdraw(97.5,)
+      var today = new Date();
+      var dd = String(today.getDate()).padStart(2, '0');
+      var mm = String(today.getMonth() + 1).padStart(2, '0');
+      var yyyy = today.getFullYear();
+
+      today = dd + '/' + mm + '/' + yyyy;
+      output = `date || credit || debit || balance\n${today} || || 97.50 || -97.50`
+      expect(account.printStatement()).toEqual(output);
+    });
   });
 })
