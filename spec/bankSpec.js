@@ -22,5 +22,11 @@ describe('Bank', function(){
       output2 = "date || credit || debit || balance\n14/07/2020 || 875 || || 875"
       expect(account.printStatement()).toEqual(output2);
     });
+    it('two deposits', function(){
+      account.deposit("04/07/2020", 775)
+      account.deposit("05/07/2020", 350)
+      output3 = "date || credit || debit || balance\n05/07/2020 || 350 || || 1125\n04/07/2020 || 775 || || 775"
+      expect(account.printStatement()).toEqual(output3);
+    });
   })
 })
