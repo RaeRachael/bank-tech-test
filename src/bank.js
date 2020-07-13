@@ -13,10 +13,14 @@ function Account() {
 
  Account.prototype.deposit = function (date, amount) {
    this.balance += amount
-   this.transactions.push(`${date} || ${amount} || || ${this.balance}`)
+   this.transactions.push(`${date} || ${this.round(amount)} || || ${this.round(this.balance)}`)
  };
 
  Account.prototype.withdraw = function (date, amount) {
    this.balance -= amount
-   this.transactions.push(`${date} || || ${amount} || ${this.balance}`)
+   this.transactions.push(`${date} || || ${this.round(amount)} || ${this.round(this.balance)}`)
  };
+
+ Account.prototype.round = function(number) {
+   return Number(number).toFixed(2)
+ }
