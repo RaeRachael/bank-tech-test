@@ -31,7 +31,7 @@ date || credit || debit || balance
 10/01/2012 || 1000.00 || || 1000.00
 ```
 
-## Reading of the Requirements
+## Reading of the Requirements - Why Only One Class
 
 I felt like taking the above example of an acceptable output as laying out all of the requirements for the tech challenge, therefore I deemed that the balance can be negative (I would have liked to have asked for clarification about that). This may have made the challenge easier than the setter intended, which also lead me to only use one class as there didn't seem to be enough code to separate into multiple classes, without added addition complexity to the code and reducing the readability of it (two classes would lead to two different code files, three different spec files). My feeling is that this choice is a very subjective one and that it could be deemed to not follow SRP. However there is always a degree of subjectivity about what constitutes a responsibility (how narrow or large can it be?)
 
