@@ -31,18 +31,7 @@ date || credit || debit || balance
 10/01/2012 || 1000.00 || || 1000.00
 ```
 
-## Plan
+## Extra Class
 
-feature tests by the output from print_statement.
-
-transaction history in an array of hashes.
-
-transaction hash -- keys
-  date
-  credit
-  debit
-  balance
-
-### changes
-
-transaction just became an array of strings.
+This branch has two classes, Account and TransactionHistory, with unit test on both (using mocking to isolate them),
+I personally feel this is beyond what the current spec on the challenge needs but is likely to be a more useful jumping off point if further requirements came in than the single class version.
