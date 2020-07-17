@@ -1,4 +1,4 @@
-describe('Bank', function(){
+describe('Bank Features', function(){
 
   var account;
   var output;

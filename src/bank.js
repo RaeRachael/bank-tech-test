@@ -12,14 +12,12 @@ Account.prototype.deposit = function (amount, date) {
   date = date || this._today()
   this.balance += amount
   this.transactionHistory.addTransaction(date, amount, 0, this.balance)
-  // this.transactions.push(`${date} || ${this._display2DP(amount)} || || ${this._display2DP(this.balance)}`)
 };
 
 Account.prototype.withdraw = function (amount, date) {
   date = date || this._today()
   this.balance -= amount
     this.transactionHistory.addTransaction(date, 0, amount, this.balance)
-  // this.transactions.push(`${date} || || ${this._display2DP(amount)} || ${this._display2DP(this.balance)}`)
 };
 
 
