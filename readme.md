@@ -20,6 +20,12 @@ date || credit || debit || balance
 10/01/2012 || 1000.00 || || 1000.00
 ```
 
+## Reading of the Requirements
+
+I felt like taking the above example of an acceptable output as laying out all of the requirements for the tech challenge, therefore I deemed that the balance can be negative (I would have liked to have asked for clarification about that). This may have made the challenge easier than the setter intended, which also lead me to only use one class as there didn't seem to be enough code to separate into multiple classes, without added addition complexity to the code and reducing the readability of it (two classes would lead to two different code files, three different spec files). My feeling is that this choice is a very subjective one and that it could be deemed to not follow SRP. However there is always a degree of subjectivity about what constitutes a responsibility (how narrow or large can it be?)
+
+There is in this branch the same task achieved using two classes to show how I would have gone about doing that separation, which goes to show the increase in code and testing that path would require. 
+
 ## Plan
 
 feature tests by the output from print_statement.
@@ -31,3 +37,7 @@ transaction hash -- keys
   credit
   debit
   balance
+
+### Changes
+
+In the process of writing the code, it became clear that holding the data in a hash isn't required for the current level of complexity asked for. So instead the history of transactions is simply saved as a string in the form required of the output.
