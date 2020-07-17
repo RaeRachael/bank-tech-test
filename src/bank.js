@@ -1,31 +1,27 @@
-function Account() {
+function Account(transactionHistory) {
+  this.transactionHistory = transactionHistory
   this.transactions = []
   this.balance = 0
 }
 
 Account.prototype.printStatement = function () {
-  output = "date || credit || debit || balance"
-  this.transactions.reverse().forEach( function(transaction) {
-    output += "\n" + transaction
-  });
-  return output
+  return this.transactionHistory.listAll()
 };
 
 Account.prototype.deposit = function (amount, date) {
   date = date || this._today()
   this.balance += amount
-  this.transactions.push(`${date} || ${this._display2DP(amount)} || || ${this._display2DP(this.balance)}`)
+  this.transactionHistory.addTransaction(date, amount, 0, this.balance)
+  // this.transactions.push(`${date} || ${this._display2DP(amount)} || || ${this._display2DP(this.balance)}`)
 };
 
 Account.prototype.withdraw = function (amount, date) {
   date = date || this._today()
   this.balance -= amount
-  this.transactions.push(`${date} || || ${this._display2DP(amount)} || ${this._display2DP(this.balance)}`)
+    this.transactionHistory.addTransaction(date, 0, amount, this.balance)
+  // this.transactions.push(`${date} || || ${this._display2DP(amount)} || ${this._display2DP(this.balance)}`)
 };
 
-Account.prototype._display2DP = function(number) {
-  return Number(number).toFixed(2)
-}
 
 Account.prototype._today = function () {
   var today = new Date();

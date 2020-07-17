@@ -2,9 +2,11 @@ describe('Bank', function(){
 
   var account;
   var output;
+  var history
 
   beforeEach(function(){
-    account = new Account;
+    history = new TransactionHistory;
+    account = new Account(history);
     output = ""
   });
 
