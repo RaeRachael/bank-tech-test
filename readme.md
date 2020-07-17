@@ -1,3 +1,14 @@
+## How to run
+
+```
+open SpecRunner
+```
+* To create an account; ``` <name> = new Account ```
+* To print statement; ``` <name>.printStatemnt()```
+* To depostit; ```<name>.deposit(<amount>)```
+* To withdraw; ```<name>.withdraw(<amount>)```
+
+
 ## Specification
 
 ### Requirements
