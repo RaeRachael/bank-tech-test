@@ -4,7 +4,7 @@ function Account(transactionHistory) {
   this.balance = 0
 }
 
-Account.prototype.printStatement = function () {
+Account.prototype.printStatment = function () {
   return this.transactionHistory.listAll()
 };
 
