@@ -25,7 +25,7 @@
     "karma-phantomjs-launcher": "^1.0.4"
   },
   "dependencies": {
-    "karma": "^5.1.0",
+    "karma": "^6.3.14",
     "karma-coverage": "^2.0.2"
   }
 }
